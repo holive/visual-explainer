@@ -1,6 +1,6 @@
 ---
 name: visual-explainer
-description: Generate beautiful, self-contained HTML pages that visually explain systems, code changes, plans, and data. Use when the user asks for a diagram, architecture overview, diff review, plan review, project recap, comparison table, or any visual explanation of technical concepts. Also use proactively when you are about to render a complex ASCII table (4+ rows or 3+ columns) — present it as a styled HTML page instead.
+description: Generate beautiful, self-contained HTML pages that visually explain any input — systems, data, reviews, comparisons, flows, or any technical content. Accepts any structured or unstructured input and selects the best visualization approach automatically.
 license: MIT
 compatibility: Requires a browser to view generated HTML files. Optional surf-cli for AI image generation.
 metadata:
@@ -10,9 +10,16 @@ metadata:
 
 # Visual Explainer
 
-Generate self-contained HTML files for technical diagrams, visualizations, and data tables. Always open the result in the browser. Never fall back to ASCII art when this skill is loaded.
+A pure visualization engine. Give it any input — structured data, code review results, architecture descriptions, comparison matrices, flow definitions, or free-form technical content — and it produces a self-contained HTML page with the best visual treatment. Always open the result in the browser. Never fall back to ASCII art when this skill is loaded.
 
-**Proactive table rendering.** When you're about to present tabular data as an ASCII box-drawing table in the terminal (comparisons, audits, feature matrices, status reports, any structured rows/columns), generate an HTML page instead. The threshold: if the table has 4+ rows or 3+ columns, it belongs in the browser. Don't wait for the user to ask — render it as HTML automatically and tell them the file path. You can still include a brief text summary in the chat, but the table itself should be the HTML page.
+## Usage
+
+1. **Analyze input.** Determine the content type (architecture, flow, comparison, timeline, schema, dashboard, etc.) and select the optimal diagram type from the list below.
+2. **Read the reference template** that matches the chosen diagram type, plus the CSS patterns reference. Read these fresh every time.
+3. **Pick a distinctive aesthetic** from the choices in the Think section below. Vary the choice from previous diagrams.
+4. **Generate the HTML page** following the full workflow (Think > Structure > Style > Deliver).
+5. **(Optional) AI illustration.** If `surf` CLI is available (`which surf`), consider generating an image via `surf gemini --generate-image` when it would genuinely enhance the page. Match the image style to the page's palette. Embed as base64 data URI. Skip when the topic is purely structural or data-driven.
+6. **Write to `~/.agent/diagrams/`** with a descriptive filename and open in the browser.
 
 ## Workflow
 
