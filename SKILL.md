@@ -4,6 +4,7 @@ description: Generate beautiful, self-contained HTML pages that visually explain
 license: MIT
 compatibility: Requires a browser to view generated HTML files. Optional surf-cli for AI image generation.
 metadata:
+  complements: [dataflow]
   author: nicobailon
   version: "0.1.0"
 ---
